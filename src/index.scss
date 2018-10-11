@@ -1,0 +1,9 @@
+.a-enter-vr-button {
+  background: url("assets/cardboard.svg") no-repeat center !important;
+  background-size: 75% !important;
+  outline: none !important;
+
+  &:active, &:hover {
+    background-color: transparent !important;
+  }
+}
