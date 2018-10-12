@@ -2,7 +2,7 @@
 
 A team building game going VR. Take a swing at it!
 
-*This is project is based on [Ian Petrarca](https://ianpetrarca.com/)s [A-Frame Boilerplate](https://github.com/ianpetrarca/webvr_boilerplate)*
+*This project is based on [Ian Petrarca](https://ianpetrarca.com/)s [A-Frame Boilerplate](https://github.com/ianpetrarca/webvr_boilerplate)*
 
 ___
 ## Installation

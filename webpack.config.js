@@ -54,11 +54,11 @@ module.exports = {
         }
       },
       {
-        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2)(\?.*)?$/,
+        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|obj|mtl)(\?.*)?$/,
         use: {
           loader: "file-loader",
           options: {
-            name: "static/[name].[ext]"
+            name: "assets/[name].[ext]"
           }
         }
       },
