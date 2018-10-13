@@ -2,8 +2,6 @@
 import "./index.scss";
 import "./assets/cardboard.svg";
 import "./assets/favicon.ico";
-import "./assets/face.obj";
-import "./assets/face.mtl";
 
 // Community Components
 import "aframe";

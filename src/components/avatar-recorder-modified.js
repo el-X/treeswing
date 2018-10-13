@@ -1,3 +1,4 @@
+window.UPLOADCARE_PUBLIC_KEY = "demopublickey";
 let uploadcare = require("uploadcare-widget");
 
 let AFRAME = require("aframe");
