@@ -49,6 +49,7 @@
     "aframe-teleport-controls": "^0.3.1",
     "install": "^0.12.1",
     "npm": "^6.4.1",
-    "super-hands": "^2.1.0"
+    "super-hands": "^2.1.0",
+    "uploadcare-widget": "^3.6.1"
   }
 }

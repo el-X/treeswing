@@ -1,23 +1,25 @@
+let uploadcare = require("uploadcare-widget");
+
 let AFRAME = require("aframe");
 
-var avatarRecorder = AFRAME.components["avatar-recorder"],
+let avatarRecorder = AFRAME.components["avatar-recorder"],
   avatarRecorderComponent = avatarRecorder.Component;
 
 avatarRecorderComponent.prototype.storeRecording = function(recordingData) {
   // thx to https://github.com/aframevr/a-saturday-night
-  var jsonData = JSON.stringify(recordingData);
-  var type = "application/json";
-  var blob = new Blob([jsonData], { type: type });
-  var url = URL.createObjectURL(blob);
-  var fileName = "player-recording-" + document.title + "-" + Date.now() + ".json";
-  var aEl = document.createElement("a");
-  aEl.href = url;
-  aEl.setAttribute("download", fileName);
-  aEl.innerHTML = "downloading...";
-  aEl.style.display = "none";
-  document.body.appendChild(aEl);
-  setTimeout(function() {
-    aEl.click();
-    document.body.removeChild(aEl);
-  }, 1);
+  let jsonData = JSON.stringify(recordingData);
+  let type = "application/json";
+  let blob = new Blob([jsonData], { type: type });
+
+  let file = uploadcare.fileFrom("object", blob);
+  file
+    .done(function(fileInfo) {
+      let cdnUrl = fileInfo.cdnUrl;
+      let url = location.protocol + "//" + location.host + location.pathname + "?url=" + cdnUrl;
+      console.log("URL to show: ", url);
+      // TODO call component for url popup
+    })
+    .fail(function(error, fileInfo) {
+      console.error("Not uploaded! ", error, fileInfo);
+    });
 };
