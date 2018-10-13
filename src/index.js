@@ -25,3 +25,4 @@ import "./components/change-fog.js";
 import "./components/phase-shift.js";
 import "./components/haptics-listener.js";
 import "./components/color-transformer.js";
+import "./components/avatar-recorder-modified.js";
