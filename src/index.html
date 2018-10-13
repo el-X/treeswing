@@ -6,7 +6,7 @@
 <a-scene id="scene" physics="gravity:-9.6">
   <a-assets>
     <a-mixin id="draggable"
-             hoverable grabbable draggable
+             hoverable grabbable draggable haptics-listener
              event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
              event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
              dynamic-body shadow>
@@ -26,20 +26,20 @@
 
   <!-- SCENE -->
   <a-entity position="8 6 -11" scale="30 30 30" text="value: Lesson 1: Building blocks;"></a-entity>
-  <a-entity obj-model="obj: #face-obj; mtl: #face-mtl" position="0 3 -12" look-at="#head"></a-entity>
   ${require('./templates/environment.html')}
 
   <!-- CAMERA RIG FOR TELEPORT-CONTROLS AND SUPER-HANDS -->
-  <a-entity>
-    <a-camera positon="0 0 0"></a-camera>
-    <a-entity id="left-hand" mixin="touch"
-              hand-controls="left">
-    </a-entity>
-    <a-entity id="right-hand" mixin="touch"
-              hand-controls="right">
-    </a-entity>
+  <a-entity id="cameraRig">
+    <!-- camera -->
+    <a-entity id="head" camera wasd-controls look-controls></a-entity>
+    <!-- hand controls -->
+    <a-entity id="left-hand" mixin="touch" hand-controls="left" haptics
+              teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: grip "></a-entity>
+    <a-entity id="right-hand" mixin="touch" hand-controls="right" haptics
+              teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: grip"></a-entity>
   </a-entity>
-  <a-entity class="cube" mixin="draggable cube" material="color: #ef2d5e"
+
+  <a-entity id="myCube" class="cube" mixin="draggable cube" material="color: #ef2d5e"
             position="-0.75 0.5 -1"></a-entity>
   <a-entity class="cube" mixin="draggable cube" material="color: #7bc8a4"
             position="-0.75 0.5 -0.5"></a-entity>

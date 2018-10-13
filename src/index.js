@@ -22,4 +22,5 @@ import './components/change-sky.js';
 import './components/change-mountains.js';
 import './components/change-fog.js';
 import './components/phase-shift.js';
+import './components/haptics-listener.js';
 import './components/color-transformer.js';
