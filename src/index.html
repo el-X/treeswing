@@ -3,7 +3,7 @@
   <title>TreeSwing</title>
 </head>
 <body>
-<a-scene id="scene" physics="gravity:-9.6">
+<a-scene id="scene" physics="gravity:-4.00; iterations: 100">
   <a-assets>
     <a-mixin id="draggable"
              hoverable grabbable draggable haptics-listener
@@ -21,7 +21,7 @@
                               colliderEndEvent: collisions;
                               colliderEndEventProperty: clearedEls;">
     </a-mixin>
-    <a-mixin id="cube" geometry="primitive: box; width: 0.5; height: 0.25; depth: 0.25"></a-mixin>
+        <a-mixin id="cube" geometry="primitive: box; width: 0.5; height: 0.25; depth: 0.25" dynamic-body="mass: 3"></a-mixin>
   </a-assets>
 
   <!-- SCENE -->
