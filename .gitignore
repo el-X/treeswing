@@ -86,3 +86,4 @@ $RECYCLE.BIN/
 
 # Editors
 /.idea/
+/build/

@@ -3,7 +3,7 @@
   <title>TreeSwing</title>
 </head>
 <body>
-<a-scene id="scene" avatar-recorder="localStorage: false" physics="gravity:-4.00; iterations: 100">
+<a-scene id="scene" avatar-recorder="localStorage: false; recordingName: recording.json" physics="gravity:-4.00; iterations: 100">
   <a-assets>
     <a-mixin id="draggable"
              hoverable grabbable draggable haptics-listener
@@ -31,11 +31,11 @@
   <!-- CAMERA RIG FOR TELEPORT-CONTROLS AND SUPER-HANDS -->
   <a-entity id="cameraRig">
     <!-- camera -->
-    <a-entity id="head" camera wasd-controls look-controls></a-entity>
+    <a-entity id="head" position="0 1.8 0" camera wasd-controls look-controls></a-entity>
     <!-- hand controls -->
-    <a-entity id="left-hand" mixin="touch" hand-controls="left" haptics
+    <a-entity id="leftHand" mixin="touch" hand-controls="left" haptics
               teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: grip "></a-entity>
-    <a-entity id="right-hand" mixin="touch" hand-controls="right" haptics
+    <a-entity id="rightHand" mixin="touch" hand-controls="right" haptics
               teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: grip"></a-entity>
   </a-entity>
 
