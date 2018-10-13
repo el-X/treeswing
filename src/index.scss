@@ -3,7 +3,8 @@
   background-size: 75% !important;
   outline: none !important;
 
-  &:active, &:hover {
+  &:active,
+  &:hover {
     background-color: transparent !important;
   }
 }

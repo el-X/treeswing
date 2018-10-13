@@ -10,4 +10,3 @@ AFRAME.registerComponent("phase-shift", {
     });
   }
 });
-
