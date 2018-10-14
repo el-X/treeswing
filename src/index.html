@@ -60,11 +60,14 @@
   <!--<a-entity class="transformer" mixin="transformer" position="3 1 -5" material="color: #ffc65d" shadow></a-entity>-->
 
 </a-scene>
-<dialog id="replay-dialog">
-  <h2>Replay URL</h2>
-  <img id="replay-dialog-qrcode" src="" alt="QR Code"/>
-  <label id="replay-dialog-link"></label>
-  <button id="replay-dialog-close-button">Close</button>
-</dialog>
+<div id="myModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3>Replay URL</h3>
+    <img id="replay-dialog-qrcode" src="" alt="QR Code"/>
+    <label id="replay-dialog-link"></label>
+  </div>
+</div>
 </body>
 </html>
