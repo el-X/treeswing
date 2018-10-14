@@ -16,7 +16,7 @@ avatarRecorderComponent.prototype.storeRecording = function(recordingData) {
   file
     .done(function(fileInfo) {
       let cdnUrl = fileInfo.cdnUrl;
-      let url = location.protocol + "//" + location.host + location.pathname + "?avatar-recording=" + cdnUrl + "&spectatorMode=true";
+      let url = location.protocol + "//" + location.host + location.pathname + "?spectatorMode=true" + "&avatar-recording=" + cdnUrl;
       console.log("URL to show: ", url);
       // TODO call component for url popup
     })

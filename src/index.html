@@ -30,10 +30,14 @@
 
   <!-- CAMERA RIG FOR TELEPORT-CONTROLS AND SUPER-HANDS -->
   <!-- camera -->
-  <a-entity id="head" position="0 1.8 0" camera wasd-controls look-controls></a-entity>
-  <!-- hand controls -->
-  <a-entity id="left-hand" mixin="touch" hand-controls="left" haptics></a-entity>
-  <a-entity id="right-hand" mixin="touch" hand-controls="right" haptics></a-entity>
+  <a-entity id="cameraRig">
+    <a-entity id="head" position="0 1.8 0" camera wasd-controls look-controls></a-entity>
+    <!-- hand controls -->
+    <a-entity id="left-hand" mixin="touch" hand-controls="left" haptics
+              teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: grip "></a-entity>
+    <a-entity id="right-hand" mixin="touch" hand-controls="right" haptics
+              teleport-controls="cameraRig: #cameraRig; teleportOrigin: #head; button: grip "></a-entity>
+  </a-entity>
 
   <a-entity class="cube" mixin="draggable cube" material="color: #ef2d5e"
             position="-0.75 0.5 -1"></a-entity>
