@@ -15,6 +15,7 @@ export default class ReplayDialog {
   show(qrCodeAsBase64, replayUrl) {
     this.qrCodeImage.src = qrCodeAsBase64;
     this.linkLabel.innerText = replayUrl;
-    this.dialog.showModal();
+    // this.dialog.showModal();
+    alert("Replay URL: " + replayUrl);
   }
 }
