@@ -25,7 +25,6 @@ avatarRecorderComponent.prototype.storeRecording = function(recordingData) {
 
       QRCode.toDataURL(url)
         .then(qrCodeImageAsBase64 => {
-          console.log(qrCodeImageAsBase64);
           new ReplayDialog().show(qrCodeImageAsBase64, url);
         })
         .catch(err => {
