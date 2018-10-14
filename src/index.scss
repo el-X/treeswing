@@ -8,3 +8,39 @@
     background-color: transparent !important;
   }
 }
+
+dialog,
+button {
+  border-radius: 0 .5em .5em;
+  border: 1px solid;
+  padding: .5em;
+  margin: .5em;
+}
+
+body {
+  font-family: Avenir, Arial, sans-serif;
+}
+
+button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  background: #666;
+  border: 1px solid #333;
+  color: white;
+  cursor: pointer;
+}
+
+dialog {
+  width: 20em;
+  background: #fffbf0;
+  border: 1px solid #e7c157;
+  display: none;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+dialog[open] {
+  display: block;
+}
