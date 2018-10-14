@@ -18,7 +18,7 @@ avatarRecorderComponent.prototype.storeRecording = function(recordingData) {
       let cdnUrl = fileInfo.cdnUrl;
       let url = location.protocol + "//" + location.host + location.pathname + "?spectatorMode=true" + "&avatar-recording=" + cdnUrl;
       console.log("URL to show: ", url);
-      // TODO call component for url popup
+      alert("Replay URL: " + url);
     })
     .fail(function(error, fileInfo) {
       console.error("Not uploaded! ", error, fileInfo);
