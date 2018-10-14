@@ -13,7 +13,6 @@ import "super-hands";
 import "aframe-teleport-controls";
 import "aframe-event-set-component";
 import "aframe-environment-component";
-import "aframe-look-at-component";
 import "aframe-motion-capture-components";
 
 // User Components
