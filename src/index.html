@@ -1,9 +1,11 @@
 <html>
 <head>
   <title>TreeSwing</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<a-scene id="scene" avatar-recorder="localStorage: false" avatar-replayer physics="gravity:-4.00; iterations: 100">
+<a-scene id="scene" avatar-recorder="localStorage: false" avatar-replayer="spectatorPosition: -2 1.8 2"
+         physics="gravity:-4.00; iterations: 100">
   <a-assets>
     <a-mixin id="draggable"
              hoverable grabbable draggable haptics-listener
@@ -25,7 +27,7 @@
   </a-assets>
 
   <!-- SCENE -->
-  <a-entity position="8 6 -11" scale="30 30 30" text="value: Lesson 1: Stacking Blocks;"></a-entity>
+  <a-entity position="8 6 -11" scale="30 30 30" text="value: Welcome to TreeSwing!;"></a-entity>
   ${require('./templates/environment.html')}
 
   <!-- CAMERA RIG FOR TELEPORT-CONTROLS AND SUPER-HANDS -->
@@ -52,17 +54,17 @@
   <a-entity class="cube" mixin="draggable cube" material="color: #ef2d5e"
             position="0.75 0.5 -0.5"></a-entity>
 
-  <dialog id="replay-dialog">
-    <h2>Replay URL</h2>
-    <img id="replay-dialog-qrcode" src="" alt="QR Code" />
-    <label id="replay-dialog-link"></label>
-    <button id="replay-dialog-close-button">Close</button>
-  </dialog>
-
   <!--<a-entity class="transformer" mixin="transformer" position="-3 1 -5" material="color: #ef2d5e" shadow></a-entity>-->
   <!--<a-entity class="transformer" mixin="transformer" position="-1 1 -5" material="color: #7bc8a4" shadow></a-entity>-->
   <!--<a-entity class="transformer" mixin="transformer" position="1 1 -5" material="color: #4cc3d9" shadow></a-entity>-->
   <!--<a-entity class="transformer" mixin="transformer" position="3 1 -5" material="color: #ffc65d" shadow></a-entity>-->
+
 </a-scene>
+<dialog id="replay-dialog">
+  <h2>Replay URL</h2>
+  <img id="replay-dialog-qrcode" src="" alt="QR Code"/>
+  <label id="replay-dialog-link"></label>
+  <button id="replay-dialog-close-button">Close</button>
+</dialog>
 </body>
 </html>
